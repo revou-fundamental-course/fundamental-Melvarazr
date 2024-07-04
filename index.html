@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Coding Project RevoU</title>
+    <link rel="icon" type="image/x-icon" href="assets/Logo.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img href="\" src="./assets/Logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#aboutme">About Me</a></li>
+                <li><a href="#portfolios">Portfolio</a></li>
+                <li><a href="#messageme">Message Me</a></li>
+            </ul>
+        </nav>
+        <div class="burger">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+            <div class="line-3"></div>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-container">
+            <section id="hero">
+                <div class="hero-left">
+                    <h3 class="pre-title">Hi <span class="color-change" id="userName"></span>, Welcome To</h3>
+                    <h1 class="hero-name">Melvara Zafirah Ramsi Portfolio Website</h1>
+                </div>
+                <div class="hero-right">
+                    <img src="./assets/a.jpg" alt="gambar orang">
+                </div>
+            </section>
+        </div>
+
+        <div class="aboutme-container">
+            <section id="aboutme">
+                <h2>About Me</h2>
+                <div class="aboutme-content">
+                    <img src="./assets/profile.jpg" alt="Profile Picture" class="profile-img">
+                    <div class="aboutme-text">
+                        <p>Hello! I'm Melvara Zafirah Ramsi, a highly motivated student from Universitas Indonesia majoring in Information Systems. I possess a strong foundation in discipline, consistency, and effective time management. With a passion for IT, particularly in UI/UX, I have honed my skills in various tools such as Figma, draw.io, Canva, and programming languages like Python. I have organizational experience in UI/UX and have worked on projects such as mockup design. These experiences have reinforced my ability to collaborate in teams and take responsibility for my contributions. My dedication to continuous improvement and problem-solving sets me apart, and I am confident that my skills and drive will make a significant impact in any role I undertake.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <section id="portfolios">
+            <div class="portfolios main-container">
+                <h3 class="pre-title">My Works</h3>
+                <h1 class="section-title">Featured Portfolios</h1>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <a href="https://www.figma.com/file/AnYWIERCNd7uUoz8b6j5bO/Template-SISTER-SEMBILAN?type=design&node-id=0%3A1&mode=design&t=4G6V1ce2MTs29tFK-1" target="_blank">
+                            <img src="./assets/project1.jpg" alt="Portfolio 1">
+                            <div class="portfolio-info">
+                                <h3>Project 1</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="portfolio-item">
+                        <a href="https://www.figma.com/file/AnYWIERCNd7uUoz8b6j5bO/Template-SISTER-SEMBILAN?type=design&node-id=0%3A1&mode=design&t=4G6V1ce2MTs29tFK-1" target="_blank">
+                            <img src="./assets/project1.jpg" alt="Portfolio 2">
+                            <div class="portfolio-info">
+                                <h3>Project 2</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="portfolio-item">
+                        <a href="https://www.figma.com/file/AnYWIERCNd7uUoz8b6j5bO/Template-SISTER-SEMBILAN?type=design&node-id=0%3A1&mode=design&t=4G6V1ce2MTs29tFK-1" target="_blank">
+                            <img src="./assets/project1.jpg" alt="Portfolio 3">
+                            <div class="portfolio-info">
+                                <h3>Project 3</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="message-us">
+            <h2 id="messageme">Message Me</h2>
+            <div class="message-container">
+                <form id="messageForm">
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name" required>
+                    <span id="nameError" class="error-message"></span>
+
+                    <label for="dob">Tanggal Lahir:</label>
+                    <input type="date" id="dob" name="dob" required>
+                    <span id="dobError" class="error-message"></span>
+
+                    <label>Jenis Kelamin:</label>
+                    <label for="male">Laki-Laki</label>
+                    <input type="radio" id="male" name="gender" value="Laki-Laki" required>
+                    <label for="female">Perempuan</label>
+                    <input type="radio" id="female" name="gender" value="Perempuan" required>
+                    <span id="genderError" class="error-message"></span>
+
+                    <label for="message">Pesan:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <span id="messageError" class="error-message"></span>
+        
+                    <button type="button" onclick="submitForm()">Submit</button>
+                </form>
+                <div id="displayData" class="data-box">
+                    <p>Current Time: <span id="currentTime"></span></p>
+                    <p>Nama: <span id="displayName"></span></p>
+                    <p>Tanggal Lahir: <span id="displayDob"></span></p>
+                    <p>Jenis Kelamin: <span id="displayGender"></span></p>
+                    <p>Pesan: <span id="displayMessage"></span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <p>Follow Me:</p>
+                <div class="social-icons">
+                    <a href="https://www.github.com/Melvarazr" class="social-icon" target="_blank"><i class="fa fa-github"></i></a>
+                    <a href="https://www.instagram.com/melvarazr" class="social-icon" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/melvarazr/" class="social-icon" target="_blank"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <p>Created By Melvara</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
